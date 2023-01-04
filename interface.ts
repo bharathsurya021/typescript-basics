@@ -38,7 +38,9 @@ details(user);
 //Class
 
 class Employee {
-    employeeName : string;
+     public employeeName : string;
+    //  private employeeName : string;
+    //  protected employeeName : string;
 
     constructor(name: string){
         this.employeeName = name;
@@ -59,7 +61,7 @@ class Manager extends Employee {
     }
 
     delegateWork(){
-        console.log(`Manager delegating tasks`);
+        console.log(`Manager delegating tasks ${this.employeeName}`);
     }
 }
 
@@ -67,3 +69,8 @@ let m1 = new Manager('Karthik')
 m1.delegateWork();
 m1.greet();
 console.log(m1.employeeName);
+
+//Access modifiers public- accessed anywhere; private - accessed only inside the containing class not even in the derived class; protected - accessed within a container and derived class
+
+
+
